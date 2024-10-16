@@ -5,6 +5,10 @@ import Home from "./views/Home.vue"; // Import the Home component
 import Blog from "./views/Blog.vue"; // Import the Home component
 import BlogPost from "./views/blogPost.vue";
 import ProductPage from "./views/ProductPage.vue";
+import ProductDetail from "./views/productDetail.vue";
+import Sub from "./views/subscribe.vue";
+import ArticleOne from "./views/blogs/article1.vue";
+
 import "./style.css";
 
 // Define your routes
@@ -28,6 +32,21 @@ const routes = [
     path: "/products",
     name: "ProductPage",
     component: ProductPage,
+  },
+  {
+    path: "/product/:id", // Adjust the path according to your needs
+    name: "ProductDetail",
+    component: ProductDetail,
+  },
+  {
+    path: "/subscribe", // Adjust the path according to your needs
+    name: "Sub",
+    component: Sub,
+  },
+  {
+    path: "/blog/article-one", // Adjust the path according to your needs
+    name: "ArticleOne",
+    component: ArticleOne,
   },
 ];
 

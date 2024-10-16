@@ -1,53 +1,33 @@
 <template>
   <section class="relative py-20 lg:pt-32 bg-[#1f2937] overflow-x-hidden">
     <div class="relative z-10 container mx-auto px-4">
-      <!-- Filter and Sort Options -->
-      <div class="flex justify-between mb-8">
-        <div>
-          <label class="text-white mr-4">Filter by Category:</label>
-          <select v-model="selectedCategory" class="py-2 px-4 rounded-md">
-            <option value="all">All</option>
-            <option value="health">Health</option>
-            <option value="fitness">Fitness</option>
-            <option value="tech">Tech</option>
-          </select>
-        </div>
+      <h2 class="mt-4 mb-16 text-3xl md:text-2xl text-white font-bold font-heading">Products</h2>
 
-        <div>
-          <label class="text-white mr-4">Sort by:</label>
-          <select v-model="sortOrder" class="py-2 px-4 rounded-md">
-            <option value="latest">Latest</option>
-            <option value="oldest">Oldest</option>
-          </select>
-        </div>
+      <!-- Category Filter Dropdown -->
+      <div class="mb-8">
+        <label for="category" class="text-white">Filter by Category: </label>
+        <select v-model="selectedCategory" id="category" class="p-2 rounded-md">
+          <option value="">All</option>
+          <option v-for="category in categories" :key="category" :value="category">{{ category }}</option>
+        </select>
       </div>
 
-      <!-- Product Cards -->
+      <!-- Filtered Products -->
       <div class="flex flex-wrap -mx-3">
-        <div v-for="product in filteredAndSortedProducts" :key="product.id" class="w-full lg:w-1/4 px-3 mb-16">
-          <a class="block mb-10" href="#">
+        <div v-for="product in filteredProducts" :key="product.id" class="w-full lg:w-1/4 px-3 mb-16">
+          <router-link :to="{ name: 'ProductDetail', params: { id: product.id } }" class="block mb-10">
             <div class="relative">
-              <span class="absolute bottom-0 left-0 ml-6 mb-6 px-2 py-1 text-xs font-bold font-heading bg-white border-2 border-red-500 rounded-full text-red-500">-15%</span>
-              <img class="w-full h-96 object-cover" :src="product.image" alt="Product Image">
+              <img class="w-full h-96 object-cover" :src="product.image" :alt="product.title" />
             </div>
             <div class="mt-12">
               <div class="mb-2">
                 <h3 class="mb-3 text-3xl text-white font-bold font-heading">{{ product.name }}</h3>
-                <p class="text-xl font-bold font-heading text-white">
-                  <span>${{ product.price }}</span>
-                  <span class="text-xs text-gray-500 font-semibold font-heading line-through">\${{ product.originalPrice }}</span>
-                </p>
+                <p class="text-xl text-white">{{ product.description }}</p>
               </div>
             </div>
-          </a>
-          <a class="inline-block bg-orange-300 hover:bg-orange-400 text-white font-bold font-heading py-4 px-8 rounded-md uppercase transition duration-200" href="#">Buy Now</a>
+          </router-link>
+          <router-link :to="{ name: 'ProductDetail', params: { id: product.id } }" class="inline-block bg-orange-300 hover:bg-orange-400 text-white font-bold font-heading py-4 px-8 rounded-md uppercase transition duration-200">Buy Now</router-link>
         </div>
-      </div>
-
-      <div class="w-full flex justify-center mt-10">
-        <a class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold font-heading py-4 px-12 rounded-md uppercase transition duration-200" href="#">
-          See More
-        </a>
       </div>
     </div>
   </section>
@@ -55,43 +35,38 @@
 
 <script>
 export default {
-  name: 'Products',
+  name: 'LatestProducts',
   data() {
     return {
-      selectedCategory: 'all',
-      sortOrder: 'latest',
+      selectedCategory: '', // Stores the selected category for filtering
       products: [
-        { id: 1, name: 'Tennis racket Sanks 2', category: 'fitness', price: 295.30, originalPrice: 330.90, createdAt: '2024-10-10', image: 'https://i.pinimg.com/736x/27/5d/06/275d062ceada6c584616dd462fc3571e.jpg' },
-        { id: 2, name: 'VONeon Board Surfing', category: 'tech', price: 295.30, originalPrice: 330.90, createdAt: '2024-09-15', image: 'https://i.pinimg.com/564x/fe/9f/c5/fe9fc53618e47885bf815cb9a2699b75.jpg' },
-        { id: 3, name: 'Beauty Serum', category: 'health', price: 250.30, originalPrice: 300.00, createdAt: '2024-09-25', image: 'https://i.pinimg.com/564x/d6/4c/9c/d64c9c4e5a6c2327acf5aa98b5d22ddb.jpg' },
-        // Add more products as needed
+        { id: 1, name: 'Tea Burn', category: 'fitness', description: 'It contains ingredients like vitamins, minerals, L-theanine, and caffeine, helping boost..', image: '/1.jpg' },
+        { id: 2, name: 'Lean Biome', category: 'health', description: 'LeanBiome contains a variety of powerhouse probiotics to improve overall gut...', image: '/3.jpg' },
+        { id: 3, name: 'GlucoBerry', category: 'tech', description: 'GlucoBerry contains optimized maqui berry, a superfood known to support optimal kidney...', image: '/2.jpg' },
+        { id: 4, name: 'Sumatra Keto Acv Gummies Slim Belly Tonic', category: 'fitness', description: 'Sumatra Keto Acv Gummies Slim Belly Tonic - Official Formula - Sumatra Slim Belly Tonic Powder Capsules Dietary ...', image: '/4.jpg' },
+        { id: 5, name: 'Neuro Zoom', category: 'health', description: 'Experience the support of our capsules in maintaining...', image: '/5.jpg' },
+        { id: 6, name: 'The Forever woman', category: 'health', description: 'The Secret to Attracting a Man Who Loves You, Sees You, And Cherishes You Into A Committed...', image: '/6.jpg' },
       ],
     };
   },
   computed: {
-    filteredAndSortedProducts() {
-      let filteredProducts = this.products;
-
-      // Filter by category
-      if (this.selectedCategory !== 'all') {
-        filteredProducts = filteredProducts.filter(product => product.category === this.selectedCategory);
+    // Get unique categories from the products array
+    categories() {
+      return [...new Set(this.products.map(product => product.category))];
+    },
+    // Filter the products based on the selected category
+    filteredProducts() {
+      if (this.selectedCategory === '') {
+        return this.products; // Show all products if no category is selected
       }
-
-      // Sort by time
-      filteredProducts = filteredProducts.sort((a, b) => {
-        if (this.sortOrder === 'latest') {
-          return new Date(b.createdAt) - new Date(a.createdAt);
-        } else {
-          return new Date(a.createdAt) - new Date(b.createdAt);
-        }
-      });
-
-      return filteredProducts;
-    }
-  }
-}
+      return this.products.filter(product => product.category === this.selectedCategory);
+    },
+  },
+};
 </script>
 
 <style scoped>
 /* Add any additional styles here */
 </style>
+
+

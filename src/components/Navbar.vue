@@ -1,6 +1,6 @@
 <template>
   <section>
-    <nav class="relative  bg-gray-800 z-50 w-full">
+    <nav class="relative bg-gray-800 z-50 w-full">
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between">
           <a class="inline-block text-lg font-bold" href="/">
@@ -20,27 +20,18 @@
 
           <!-- Desktop Menu -->
           <ul class="hidden lg:flex space-x-12">
-            <li class="group relative">
-              <a class="text-sm text-white hover:text-orange-100 font-medium cursor-pointer" href="/blog-page">Blog</a>
-              <!-- Dropdown -->
-              <div class="absolute top-full left-0 hidden group-hover:block min-w-max max-w-xs p-4 z-50">
-                <div class="w-full max-w-xs bg-white border border-gray-100 rounded-3xl pt-4 pb-4 px-4">
-                  <a class="block py-3 px-4 text-sm text-gray-900 hover:bg-orange-50 rounded-lg" href="#">Fitness</a>
-                  <a class="block py-3 px-4 text-sm text-gray-900 hover:bg-orange-50 rounded-lg" href="#">Health</a>
-                                  <a class="block py-3 px-4 text-sm text-gray-900 hover:bg-orange-50 rounded-lg" href="#">Tech</a>
-                </div>
-              </div>
+            <li>
+              <a class="text-sm text-white hover:text-orange-100 font-medium cursor-pointer" href="/blog-page">Blogs</a>
             </li>
-            <li><a class="text-sm text-white hover:text-orange-100 font-medium" href="#">Solutions</a></li>
-            <li><a class="text-sm text-white hover:text-orange-100 font-medium" href="#">Products</a></li>
-            <li><a class="text-sm text-white hover:text-orange-100 font-medium" href="#">Articles</a></li>
+            <li>
+              <a class="text-sm text-white hover:text-orange-100 font-medium cursor-pointer" href="/products">Products</a>
+            </li>
           </ul>
 
-          <!-- Sign In and Create Account -->
+          <!-- Subscribe Button -->
           <div class="hidden lg:block">
             <div class="flex items-center">
-              <a class="text-sm font-semibold text-white hover:text-orange-100 mr-6" href="#">Sign In</a>
-              <a class="inline-block py-3 px-4 text-sm font-semibold text-orange-50 bg-orange-500 border border-orange-500 rounded-md transition duration-300 hover:bg-orange-700" href="#">Subscribe</a>
+              <a class="inline-block py-3 px-4 text-sm font-semibold text-orange-50 bg-orange-500 border border-orange-500 rounded-md transition duration-300 hover:bg-orange-700" href="/subscribe">Subscribe</a>
             </div>
           </div>
         </div>
@@ -60,14 +51,11 @@
           </button>
         </div>
         <ul>
-          <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg" href="#">About Us</a></li>
-          <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg" href="#">Blog</a></li>
-          <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg" href="#">Solutions</a></li>
-          <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg" href="#">Products</a></li>
-          <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg" href="#">Articles</a></li>
+          <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg" href="/blog-page">Blogs</a></li>
+          <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg" href="/products">Products</a></li>
         </ul>
         <div class="py-8 px-6 border-t border-b">
-          <a class="text-sm font-semibold text-orange-900 hover:text-orange-600" href="#">Contact Support</a>
+          <a class="text-sm font-semibold text-orange-900 hover:text-orange-600" href="/subscribe">Subscribe</a>
         </div>
       </nav>
     </div>
@@ -93,3 +81,4 @@ export default {
   font-style: normal;
 }
 </style>
+

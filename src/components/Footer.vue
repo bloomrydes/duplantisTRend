@@ -13,7 +13,7 @@
             <div class="w-full lg:w-1/2 px-4">
               <div class="sm:flex -mb-4 items-center lg:justify-end">
                 <span class="inline-block text-white mb-4 mr-8">Ready to Buy?</span>
-                <a class="relative group inline-block w-full sm:w-auto py-3 px-5 mb-4 text-center text-sm font-semibold text-orange-50 hover:text-orange-900 bg-orange-900 rounded-md overflow-hidden transition duration-300" href="#">
+                <a class="relative group inline-block w-full sm:w-auto py-3 px-5 mb-4 text-center text-sm font-semibold text-orange-50 hover:text-orange-900 bg-orange-900 rounded-md overflow-hidden transition duration-300" href="/products">
                   <div class="absolute top-0 right-full w-full h-full bg-white transform group-hover:translate-x-full group-hover:scale-105 transition duration-500"></div>
                   <span class="relative">Get Started</span>
                 </a>
@@ -22,17 +22,17 @@
           </div>
         </div>
 
-        <!-- Navigation Links -->
+        <!-- Social Media Links -->
         <div class="flex flex-wrap -mb-5 lg:-mx-6 items-center justify-center">
-          <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Product</a></div>
-          <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Blog</a></div>
-          <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">About</a></div>
-          <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Privacy</a></div>
+          <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="https://youtube.com/@duplantistrends?si=rt0q8GxqlHkxyDr5" target="_blank">Youtube</a></div>
+          
+          <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="https://instagram.com" target="_blank">Pinterest</a></div>
+          <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="https://www.tiktok.com/@duplantistrends?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a></div>
         </div>
 
         <!-- Footer -->
         <div class="mt-15 text-center">
-          <span class="text-gray-500">© 2023 saturn. All rights reserved.</span>
+          <span class="text-gray-500">© 2024 DuplantisTrend. All rights reserved.</span>
         </div>
       </div>
     </div>
