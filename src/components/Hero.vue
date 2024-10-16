@@ -5,7 +5,7 @@
       <div class="flex items-center justify-center w-full h-full bg-gray-900/40">
         <div class="text-center">
           <h1 class="text-3xl font-semibold text-white lg:text-4xl">Exploring the  
-            <span class="text-orange-400">Duplantis Trend:</span>A New Era in Entertainment
+            <span class="text-orange-400">Duplantis World:</span>A New Era in Trends
           </h1>
           <router-link to="/products">
     <button class="w-full px-5 py-2 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-[#1f2937] rounded-md lg:w-auto hover:bg-blue-900 focus:outline-none focus:bg-[#083344] md:text-base md:px-4 md:py-3">
