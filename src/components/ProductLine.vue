@@ -24,7 +24,7 @@
         </div>
 
         <div class="w-full flex justify-center mt-10">
-          <a class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold font-heading py-4 px-12 rounded-md uppercase transition duration-200" href="#">
+          <a class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold font-heading py-4 px-12 rounded-md uppercase transition duration-200" href="/products">
             See More
           </a>
         </div>

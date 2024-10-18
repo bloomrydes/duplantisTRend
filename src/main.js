@@ -9,6 +9,9 @@ import ProductDetail from "./views/productDetail.vue";
 import Sub from "./views/subscribe.vue";
 import ArticleOne from "./views/blogs/article1.vue";
 
+import ArticleTwo from "./views/blogs/article2.vue";
+import ArticleThree from "./views/blogs/article3.vue";
+
 import "./style.css";
 
 // Define your routes
@@ -47,6 +50,16 @@ const routes = [
     path: "/blog/article-one", // Adjust the path according to your needs
     name: "ArticleOne",
     component: ArticleOne,
+  },
+  {
+    path: "/blog/article-two", // Adjust the path according to your needs
+    name: "ArticleTwo",
+    component: ArticleTwo,
+  },
+  {
+    path: "/blog/article-three", // Adjust the path according to your needs
+    name: "ArticleThree",
+    component: ArticleThree,
   },
 ];
 

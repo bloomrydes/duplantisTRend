@@ -1,11 +1,10 @@
 <template>
   <section class="relative py-12 lg:pt-22 bg-[#ffff] overflow-x-hidden">
     <div class="relative z-10 container mx-auto px-4">
-      
       <h2 class="mt-4 mb-16 text-4xl md:text-2xl text-black font-bold font-heading">Latest Blogs</h2>
       <div class="flex flex-wrap -mx-3">
         <div class="w-full lg:w-1/4 px-3 mb-16 lg:mb-0" v-for="(blog, index) in blogs" :key="blog.id">
-          <router-link :to="{ name: 'BlogPost', params: { id: blog.id } }" class="block mb-10"> <!-- Use router-link for navigation -->
+          <router-link :to="{ name: blog.routeName }" class="block mb-10"> <!-- Use router-link for navigation -->
             <div class="relative">
               <img class="w-full h-64 object-cover" :src="blog.image" alt="Blog Post Title" />
             </div>
@@ -28,11 +27,14 @@
         </div>
 
         <div class="w-full flex justify-center mt-10">
-          <a class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold font-heading py-4 px-12 rounded-md uppercase transition duration-200" href="#">
+          <a class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold font-heading py-4 px-12 rounded-md uppercase transition duration-200" href="/blog-page">
             See More
           </a>
         </div>
       </div>
+
+      <!-- Medium links section -->
+      
     </div>
   </section>
 </template>
@@ -45,32 +47,28 @@ export default {
       blogs: [
         {
           id: 1,
-          title: "Behind the Curtain: Insights You Wont Find In Books",
+          title: "Behind the Curtain: Insights You Won't Find In Books",
           description: "Discover how Neurozoom can enhance your cognitive function and support your brain health. Learn more here!",
-          date: "July , 2024",
+          date: "10 October 2024",
           image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*6m4L8Z0vlNQ32mt2cn-sqw@2x.jpeg",
+          routeName: "ArticleOne", // Corresponding route name
         },
-        // {
-        //   id: 2,
-        //   title: "Hydration: The Key to Performance",
-        //   description: "Discover how Neurozoom can enhance your cognitive function and support your brain health. Learn more here!",
-        //   date: "July 11, 2024",
-        //   image: "https://i.pinimg.com/564x/fe/9f/c5/fe9fc53618e47885bf815cb9a2699b75.jpg",
-        // },
-        // {
-        //   id: 3,
-        //   title: "Surfing: Tips for Beginners",
-        //   description: "Essential tips for getting started with surfing this summer.",
-        //   date: "July 10, 2024",
-        //   image: "https://i.pinimg.com/564x/fe/9f/c5/fe9fc53618e47885bf815cb9a2699b75.jpg",
-        // },
-        // {
-        //   id: 4,
-        //   title: "Fitness Gear: Must-Haves for Summer",
-        //   description: "A guide to the essential fitness gear you need for summer sports.",
-        //   date: "July 9, 2024",
-        //   image: "https://i.pinimg.com/564x/fe/9f/c5/fe9fc53618e47885bf815cb9a2699b75.jpg",
-        // },
+        {
+          id: 2,
+          title: "The Secret to Attracting and Keeping a Man Who Loves You: A Guide to Lasting Commitment",
+          description: "How To Make Him Want To Come Back.",
+          date: "2 October 2024",
+          image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2mrLRQORWUlnICf8icb2LA@2x.jpeg",
+          routeName: "ArticleTwo", // Corresponding route name
+        },
+        {
+          id: 3,
+          title: "Boost Your Brain Health with Simple Lifestyle Hacks 🧠",
+          description: "Discover How Neurozoom Can Enhance Your Cognitive Function And Support Your Brain.",
+          date: "July 10, 2024",
+          image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2XNoQNVPXqo2D4nxM7o37A@2x.jpeg",
+          routeName: "ArticleThree", // Corresponding route name
+        },
       ],
     };
   },
@@ -80,4 +78,3 @@ export default {
 <style scoped>
 /* Add any necessary styles here */
 </style>
-
