@@ -6,7 +6,7 @@
       muted
       class="absolute top-0 left-0 w-full h-full object-cover"
     >
-      <source src="/public/Video.mp4" type="video/mp4" />
+      <source src="/public/video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     <div class="flex items-center justify-center w-full h-full bg-black/60"> <!-- Darker overlay for visibility -->
