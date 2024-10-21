@@ -24,7 +24,7 @@
 
         <!-- Social Media Links -->
         <div class="flex flex-wrap -mb-5 lg:-mx-6 items-center justify-center">
-          <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="https://youtube.com/@duplantistrends?si=rt0q8GxqlHkxyDr5" target="_blank">Youtube</a></div>
+          <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="https://www.youtube.com/@DuplantisTrends" target="_blank">Youtube</a></div>
           
           <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="https://instagram.com" target="_blank">Pinterest</a></div>
           <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="https://www.tiktok.com/@duplantistrends?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a></div>

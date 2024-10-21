@@ -51,8 +51,8 @@
           </button>
         </div>
         <ul>
-          <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg lg:text-lg" href="/blog-page">Blogs</a></li>
-          <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg lg:text-lg" href="/products">Products</a></li>
+          <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg lg:text-2lg" href="/blog-page">Blogs</a></li>
+          <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg lg:text-2lg" href="/products">Products</a></li>
         </ul>
         <div class="py-8 px-6 border-t border-b">
           <a class="text-sm lg:text-lg font-semibold text-orange-900 hover:text-orange-600" href="/subscribe">Subscribe</a>
