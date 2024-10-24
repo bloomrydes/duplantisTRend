@@ -91,7 +91,7 @@ export default {
       this.showDubbingMessage(route); // Show the dubbing message
     },
     showDubbingMessage(route) {
-      // Simple alert for dubbing message
+      
       alert(`Navigating to ${route}`); // Replace this with a custom toast if desired
     },
   },
