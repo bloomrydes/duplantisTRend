@@ -4,7 +4,7 @@
      
       <h2 class="mt-3 mb-8 text-2xl md:text-xl text-white font-bold font-heading">Beauty Product</h2>
       <div class="flex flex-wrap -mx-2">
-        <div v-for="product in products" :key="product.id" class="w-full sm:w-1/2 lg:w-1/4 px-2 mb-8">
+        <div v-for="product in products" :key="product.id" class="w-full sm:w-1/2 lg:w-1/4 px-2 mb-8 s">
           <a class="block mb-4" @click.prevent="navigateToProduct(product.id)">
             <div class="relative">
               <img class="w-full h-48 object-cover rounded-md" :src="product.image" :alt="product.name" />

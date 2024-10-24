@@ -6,21 +6,21 @@
       muted
       class="absolute top-0 left-0 w-full h-full object-cover"
     >
-      <source src="/public/video.mp4" type="video/mp4" />
+      <source src="/video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <div class="flex items-center justify-center w-full h-full bg-black/60"> <!-- Darker overlay for visibility -->
+    <div class="flex flex-col items-center justify-center w-full h-full bg-black/60"> <!-- Darker overlay for visibility -->
       <div class="text-center z-10"> <!-- Ensure text is above the video -->
         <h1 class="text-3xl font-semibold text-white lg:text-4xl">
-           
-          <span class="text-orange-400">Duplantis Trends:</span> <span class="text-blue-900">Discovering the trends shaping our world...</span>
+          <span class="text-white">Duplantis Trends:</span>
+          <span class="text-orange-400"> Discovering the trends shaping our world...</span>
         </h1>
-        <router-link to="/products">
-          <button class="w-full px-5 py-2 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-[#1f2937] rounded-md lg:w-auto hover:bg-blue-900 focus:outline-none focus:bg-[#083344] md:text-base md:px-4 md:py-3">
-            Buy Now
-          </button>
-        </router-link>
       </div>
+      <router-link to="/products" class="mt-4"> <!-- Added margin to separate button from text -->
+        <button class="w-full px-5 py-2 sm:w-[30%] text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-[#1f2937] rounded-md lg:w-auto md:w-1/2 hover:bg-blue-900 focus:outline-none focus:bg-[#083344] md:text-base md:px-4 md:py-3">
+          Buy Now
+        </button>
+      </router-link>
     </div>
   </header>
 </template>
