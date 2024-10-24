@@ -1,11 +1,16 @@
 <template>
-  <section class="container mx-auto py-20">
+  <section class="container mx-auto py-20 px-4 lg:px-0">
     <div v-if="product" class="bg-white shadow-lg rounded-lg overflow-hidden">
-      <img class="w-full h-96 object-cover" :src="product.image" alt="Product Image">
-      <div class="p-6">
-        <h2 class="text-3xl font-bold mb-4">{{ product.name }}</h2>
-        <p class="text-gray-700 mb-4">{{ product.description }}</p>
-        <button @click="buyNow" class="bg-blue-500 text-white py-2 px-4 rounded mt-4">Buy Now</button>
+      <div class="lg:flex lg:space-x-8">
+        <!-- Product Image -->
+        <img class="w-full lg:w-1/2 h-96 object-cover" :src="product.image" alt="Product Image">
+
+        <!-- Product Details -->
+        <div class="p-6 lg:w-1/2 lg:p-0 lg:flex lg:flex-col lg:justify-center">
+          <h2 class="text-3xl font-bold mb-4">{{ product.name }}</h2>
+          <p class="text-gray-700 mb-4">{{ product.description }}</p>
+          <button @click="buyNow" class="bg-blue-500 text-white py-2 px-4 rounded mt-4">Buy Now</button>
+        </div>
       </div>
     </div>
     <div v-else class="text-center">
