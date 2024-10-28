@@ -1,10 +1,16 @@
 <template>
+
   <section class="relative py-12 lg:pt-20 bg-[#1f2937] overflow-x-hidden">
+    <!-- Centered and Styled H1 Header -->
+      <h1 class="text-center text-3xl lg:text-4xl text-white font-bold font-heading mb-6 bg-orange-400 py-8">
+      Duplantis Trends An Affiliate To ClickBank
+    </h1>
+    
     <div class="relative z-10 container mx-auto px-4">
-     
-      <h2 class="mt-3 mb-8 text-2xl md:text-xl text-white font-bold font-heading">Beauty Product</h2>
+      <h2 class="mt-3 mb-8 text-2xl md:text-xl text-white font-bold font-heading">Health and Beauty Products</h2>
+      
       <div class="flex flex-wrap -mx-2">
-        <div v-for="product in products" :key="product.id" class="w-full sm:w-1/2 lg:w-1/4 px-2 mb-8 s">
+        <div v-for="product in products" :key="product.id" class="w-full sm:w-1/2 lg:w-1/4 px-2 mb-8">
           <a class="block mb-4" @click.prevent="navigateToProduct(product.id)">
             <div class="relative">
               <img class="w-full h-48 object-cover rounded-md" :src="product.image" :alt="product.name" />

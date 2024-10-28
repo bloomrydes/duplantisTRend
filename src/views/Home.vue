@@ -1,5 +1,5 @@
 <template>
- <Hero/>
+ <!-- <Hero/> -->
     <ProductComponent/>    
     <BlogComponent/>
     <NewsletterSection/>
@@ -7,7 +7,7 @@
 
 </template>
 <script>
-  import Hero from '../components/Hero.vue';
+  // import Hero from '../components/Hero.vue';
 import ProductComponent from  '../components/ProductLine.vue';
 import BlogComponent from  '../components/Blog.vue';
 import NewsletterSection from  '../components/NewsLetter.vue';
@@ -15,7 +15,7 @@ import Testimonials from '../components/Testimonial.vue';
 
 export default {
   components: {
-    Hero,
+    // Hero,
     ProductComponent,
     BlogComponent,
     NewsletterSection,
