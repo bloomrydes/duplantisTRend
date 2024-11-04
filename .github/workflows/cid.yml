@@ -1,5 +1,5 @@
 
-name: Deploy
+name: Deployy
 
 on: [push]
 
