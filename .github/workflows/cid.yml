@@ -1,49 +1,33 @@
-name: Deploy Vue.js 
+name: Deploy
 
-on:
-  push:
-    branches:
-      - main  # Adjust the branch as necessary
+on: [push]
 
 jobs:
-  deploy:
+  build:
+
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v1
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
+    - name: Copy repository contents via scp
+      uses: appleboy/scp-action@master
+      env:
+        HOST: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.SSH_KEY }}
       with:
-        node-version: '16'  # Specify the Node.js version
+        source: "."
+        target: "/var/www/duplantistrends"
 
-    - name: Install dependencies
-      run: npm install
+    - name: Executing remote command
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.SSH_KEY }}
+        script: ls
 
-    - name: Build the app
-      run: npm run build
-
-    - name: Copy files to VPS
-      env:
-        VPS_HOST: ${{ secrets.HOST }}
-        VPS_USER: ${{ secrets.USERNAME }}
-        VPS_SSH_KEY: ${{ secrets.SSH_KEY }}
-        TARGET_DIR: ${{ secrets.TARGET_DIR }}
-      run: |
-        echo "${VPS_SSH_KEY}" > private_key
-        chmod 600 private_key
-        rsync -r --delete -e "ssh -i private_key -o StrictHostKeyChecking=no" dist/ ${VPS_USER}@${VPS_HOST}:${TARGET_DIR}
-        rm private_key
-
-    - name: Restart server (optional)
-      env:
-        VPS_HOST: ${{ secrets.VPS_HOST }}
-        VPS_USER: ${{ secrets.VPS_USER }}
-        VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
-      run: |
-        echo "${VPS_SSH_KEY}" > private_key
-        chmod 600 private_key
-        ssh -i private_key -o StrictHostKeyChecking=no ${VPS_USER}@${VPS_HOST} 'cd ${TARGET_DIR} && pm2 restart all'  # Modify as per your process manager
-        rm private_key
 
