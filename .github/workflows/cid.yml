@@ -30,6 +30,6 @@ jobs:
       run: |
         echo "$PRIVATE_KEY" > private_key
         chmod 600 private_key
-        rsync -avz -e "ssh -i private_key -o StrictHostKeyChecking=no" dist/ username@your-vps-ip:/path/to/your/app
-        ssh -i private_key -o StrictHostKeyChecking=no username@your-vps-ip "cd /path/to/your/app && pm2 restart your-app-name"
+        rsync -avz -e "ssh -i private_key -o StrictHostKeyChecking=no" dist/root@209.159.153.43:/var/www/duplantistrends
+        ssh -i private_key -o StrictHostKeyChecking=no root@209.159.153.43 "cd /var/www/duplantistrends && pm2 restart root"
 
