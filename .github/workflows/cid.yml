@@ -32,7 +32,7 @@ jobs:
         env:
           SSH_USER: ${{ secrets.USERNAME }}
           SERVER_IP: ${{ secrets.HOST }}
-          SERVER_PATH: ${{ secrets.SERVER_PATH }}
+          SERVER_PATH: "/var/www/duplantistrend"
         run: |
           # Create directory if it doesn't exists
           ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP "mkdir -p $SERVER_PATH"
