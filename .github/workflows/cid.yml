@@ -4,30 +4,53 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+      # Step 1: Check out the repository
+      - uses: actions/checkout@v2
 
-    - name: Copy repository contents via scp
-      uses: appleboy/scp-action@master
-      env:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSH_KEY }}
-      with:
-        source: "."
-        target: "/var/www/duplantistrends"
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Specify the version of Node.js you need
 
-    - name: Executing remote command
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSH_KEY }}
-        script: ls
+      # Step 3: Install dependencies and build the project
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build  # Assumes Vue app builds to a 'dist' directory
+
+      # Step 4: Copy built files to the VPS
+      - name: Copy built files via scp
+        uses: appleboy/scp-action@master
+        env:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSH_KEY }}
+        with:
+          source: "dist/"       # Copy only the build output directory
+          target: "/var/www/duplantistrends"  # Target directory on your server
+
+      # Step 5: Execute commands on the VPS
+      - name: Restart server or web service
+        uses: appleboy/ssh-action@master
+        env:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSH_KEY }}
+        with:
+          script: |
+            # Navigate to the target directory (optional)
+            cd /var/www/duplantistrends
+
+            # For example, restart a Node.js service with PM2, or reload Nginx/Apache
+            # Uncomment and modify the command based on your server setup:
+            # pm2 restart all               # For Node.js apps
+            # sudo systemctl restart nginx  # For Nginx
+            # sudo systemctl restart apache2 # For Apache
 
 
