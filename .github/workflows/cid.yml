@@ -1,56 +1,39 @@
-name: Deploy
+name: Deploy Vue.js App to VPS
 
-on: [push]
+on:
+  push:
+    branches:
+      - main  # Change this to your default branch if needed
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Check out the repository
-      - uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      # Step 2: Set up Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'  # Specify the version of Node.js you need
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'  # Specify your Node.js version
 
-      # Step 3: Install dependencies and build the project
-      - name: Install dependencies and build
-        run: |
-          npm install
-          npm run build  # Assumes Vue app builds to a 'dist' directory
+    - name: Install dependencies
+      run: npm install
 
-      # Step 4: Copy built files to the VPS
-      - name: Copy built files via scp
-        uses: appleboy/scp-action@master
-        env:
-          HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.SSH_KEY }}
-        with:
-          source: "dist/"       # Copy only the build output directory
-          target: "/var/www/duplantistrends"  # Target directory on your server
+    - name: Build the app
+      run: npm run build
 
-      # Step 5: Execute commands on the VPS
-      - name: Restart server or web service
-        uses: appleboy/ssh-action@master
-        env:
-          HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.SSH_KEY }}
-        with:
-          script: |
-            # Navigate to the target directory (optional)
-            cd /var/www/duplantistrends
-
-            # For example, restart a Node.js service with PM2, or reload Nginx/Apache
-            # Uncomment and modify the command based on your server setup:
-            # pm2 restart all               # For Node.js apps
-            # sudo systemctl restart nginx  # For Nginx
-            # sudo systemctl restart apache2 # For Apache
+    - name: Deploy to VPS
+      env:
+        VPS_SSH_KEY: ${{ secrets.SSH_KEY }}
+        VPS_HOST: ${{ secrets.HOST }}
+        VPS_USER: ${{ secrets.USERNAME }}
+        VPS_DESTINATION_PATH: "/home/root/"
+      run: |
+        echo "$VPS_SSH_KEY" > deploy_key
+        chmod 600 deploy_key
+        rsync -avz --delete -e "ssh -i deploy_key -o StrictHostKeyChecking=no" dist/ $VPS_USER@$VPS_HOST:$VPS_DESTINATION_PATH
+        rm deploy_key
 
 
