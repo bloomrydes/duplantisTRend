@@ -27,9 +27,5 @@ jobs:
         host: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSHKEY }}
+        KEY: ${{ secrets.SSH_KEY }}
         script: ls
-          scp -o StrictHostKeyChecking=no -r dist/* $SSH_USER@$SERVER_IP:$SERVER_PATH
-
-          # Optionally, restart the server if needed
-          ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP "sudo systemctl restart my-vue-app-service"
