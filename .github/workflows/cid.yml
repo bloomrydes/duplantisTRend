@@ -34,7 +34,7 @@ jobs:
           SERVER_IP: ${{ secrets.HOST }}
           SERVER_PATH: ${{ secrets.SERVER_PATH }}
         run: |
-          # Create directory if it doesn't exist
+          # Create directory if it doesn't exists
           ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP "mkdir -p $SERVER_PATH"
           
           # Copy build files to the server
