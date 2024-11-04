@@ -170,7 +170,7 @@ While supplements like Neurozoom can play a significant role in enhancing cognit
                   <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2mrLRQORWUlnICf8icb2LA@2x.jpeg" class="mb-5 rounded-lg" alt="Image 2">
               </a>
               <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
-                  <a href="/blog/article-two">The Secret to Attracting and Keeping a Man Who Loves You: A Guide to Lasting Commitment</a>
+                  <a href="/blog/article-two">The Secret to Attracting and Keeping a Man Who Love's You: A Guide to Lasting Commitment</a>
               </h2>
               <p class="mb-4  text-gray-500 dark:text-gray-400">how to Make Him Want to come back and never leave again....</p>
               <a href="/blog/article-two" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
