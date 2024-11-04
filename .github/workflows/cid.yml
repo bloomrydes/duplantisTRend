@@ -1,31 +1,45 @@
-name: Deploy
+name: Deploy 
 
-on: [push]
+on:
+  push:
+    branches:
+      - main  
 
 jobs:
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Copy repository contents via scp
-      uses: appleboy/scp-action@master
-      env:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSH_KEY }}
-      with:
-        source: "."
-        target: "/var/www/duplantistrends"
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Ensure this matches your Vue app's Node version
 
-    - name: Executing remote command
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSH_KEY }}
-        script: ls
+      - name: Install dependencies and build Vue app
+        run: |
+          npm install
+          npm run build
+
+      - name: Add SSH Key
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
+
+      - name: Deploy to VPS
+        env:
+          SSH_USER: ${{ secrets.USERNAME }}
+          SERVER_IP: ${{ secrets.HOST }}
+          SERVER_PATH: "/var/www/mywebsite"
+        run: |
+          # Create directory if it doesn't exist
+          ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP "mkdir -p $SERVER_PATH"
+          
+          # Copy build files to the server
+          scp -o StrictHostKeyChecking=no -r dist/* $SSH_USER@$SERVER_IP:$SERVER_PATH
+
+          # Optionally, restart the server if needed
+          ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP "sudo systemctl restart my-vue-app-service"
+
