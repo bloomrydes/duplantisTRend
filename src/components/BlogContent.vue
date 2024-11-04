@@ -70,6 +70,22 @@ export default {
           category: 'Health', // Category
           summary: 'Discover How Neurozoom Can Enhance Your Cognitive Function And Support Your Brain..', // Added summary
         },
+        {
+          id: '4',
+          title: 'Lost Treasures and Timeless Tales: Unearthing the Rich Tapestry of Benin History',
+          date: 'October 16, 2024',
+          image: 'https://miro.medium.com/v2/resize:fit:1400/format:webp/1*3P0yqPSzoQIl1o09lTmgZg@2x.jpeg',
+          category: 'Lifestyle', // Category
+          summary: 'In the heart of West Africa, nestled between lush forests and the banks of the Niger River, lay the majestic Benin Kingdom ..', // Added summary
+        },
+        {
+          id: '5',
+          title: 'From Heavy To Healthy',
+          date: 'October 22, 2024',
+          image: 'https://miro.medium.com/v2/resize:fit:1400/format:webp/1*jm7B_1Y0l9M41A_BlmslKg@2x.jpeg',
+          category: 'Health', // Category
+          summary: "Empower Your Weight Loss Journey With LeanBiome's Unique Formula..", // Added summary
+        },
       ],
     };
   },
@@ -90,6 +106,10 @@ export default {
           return '/blog/article-two';
         case '3':
           return '/blog/article-three';
+          case '4':
+          return '/blog/article-four';
+          case '5':
+          return '/blog/article-five';
         default:
           return '/blog'; // Fallback route
       }

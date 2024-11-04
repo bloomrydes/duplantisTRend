@@ -28,7 +28,7 @@
       
       <p class="lead mt-4 mb-8">
         In today’s fast-paced world, maintaining optimal brain health is more important than ever. With the demands of daily life, from work to social commitments, our cognitive function can sometimes take a hit. Enter Neurozoom, a groundbreaking supplement designed to support brain health and enhance mental clarity. In this article, we’ll explore how Neurozoom can aid your cognitive well-being and share some simple lifestyle hacks to boost your brain power. Discover how Neurozoom can enhance your cognitive function and support your brain health.
-        <a href="/product/1" class="text-blue-300 underline"> Learn more here!</a>
+        <a href="https://teaburn.com/welcome?hop=jasper0077" class="text-blue-300 underline"> Learn more here!</a>
       </p>
 <figure class="mb-8 lg:mb-10">
         <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2XNoQNVPXqo2D4nxM7o37A@2x.jpeg" alt="">
@@ -148,31 +148,32 @@ While supplements like Neurozoom can play a significant role in enhancing cognit
 </main>
 
 
+
 <aside aria-label="Related articles" class="py-8 lg:py-24 bg-gray-50 dark:bg-gray-800">
   <div class="px-4 mx-auto max-w-screen-xl">
       <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Related articles</h2>
       <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <article class="max-w-xs">
-              <a href="/article-two">
+              <a href="/blog/article-three">
                   <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2XNoQNVPXqo2D4nxM7o37A@2x.jpeg" class="mb-5 rounded-lg" alt="Image 1">
               </a>
               <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
-                  <a href="#">Boost Your Brain health with Simple Lifestyle Hacks 🧠</a>
+                  <a href="/blog/article-three">Boost Your Brain health with Simple Lifestyle Hacks 🧠</a>
               </h2>
               <p class="mb-4 text-gray-500 dark:text-gray-400">Discover how Neurozoom can enhance your cognitive function and support your brain health...</p>
-              <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+              <a href="/blog/article-three" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
                   Read in 4 minutes
               </a>
           </article>
           <article class="max-w-xs">
-              <a href="/blog/article-three">
+              <a href="/blog/article-two">
                   <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2mrLRQORWUlnICf8icb2LA@2x.jpeg" class="mb-5 rounded-lg" alt="Image 2">
               </a>
               <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
-                  <a href="#">The Secret to Attracting and Keeping a Man Who Loves You: A Guide to Lasting Commitment</a>
+                  <a href="/blog/article-two">The Secret to Attracting and Keeping a Man Who Loves You: A Guide to Lasting Commitment</a>
               </h2>
               <p class="mb-4  text-gray-500 dark:text-gray-400">how to Make Him Want to come back and never leave again....</p>
-              <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+              <a href="/blog/article-two" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
                   Read in 12 minutes
               </a>
           </article>

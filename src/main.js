@@ -11,7 +11,9 @@ import ArticleOne from "./views/blogs/article1.vue";
 
 import ArticleTwo from "./views/blogs/article2.vue";
 import ArticleThree from "./views/blogs/article3.vue";
+import ArticleFour from "./views/blogs/article4.vue";
 
+import ArticleFive from "./views/blogs/article5.vue";
 import "./style.css";
 
 // Define your routes
@@ -60,6 +62,16 @@ const routes = [
     path: "/blog/article-three", // Adjust the path according to your needs
     name: "ArticleThree",
     component: ArticleThree,
+  },
+  {
+    path: "/blog/article-four", // Adjust the path according to your needs
+    name: "ArticleFour",
+    component: ArticleFour,
+  },
+  {
+    path: "/blog/article-five", // Adjust the path according to your needs
+    name: "ArticleFive",
+    component: ArticleFive,
   },
 ];
 

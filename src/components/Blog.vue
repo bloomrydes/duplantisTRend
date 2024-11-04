@@ -27,10 +27,14 @@
         </div>
 
         <div class="w-full flex justify-center mt-10">
-          <a class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold font-heading py-3 px-8 rounded-md uppercase transition duration-200" href="/blog-page">
-            See More
-          </a>
-        </div>
+  <router-link
+    class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold font-heading py-3 px-8 rounded-md uppercase transition duration-200"
+    to="/blog-page"
+  >
+    See More
+  </router-link>
+</div>
+
       </div>
     </div>
   </section>

@@ -26,10 +26,14 @@
         </div>
 
         <div class="w-full flex justify-center mt-6">
-          <a class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold font-heading py-2 px-8 rounded-md uppercase transition duration-200" href="/products">
-            See More
-          </a>
-        </div>
+  <router-link
+    class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold font-heading py-2 px-8 rounded-md uppercase transition duration-200"
+    to="/products"
+  >
+    See More
+  </router-link>
+</div>
+
       </div>
     </div>
   </section>

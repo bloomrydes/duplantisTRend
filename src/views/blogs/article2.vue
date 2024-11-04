@@ -31,7 +31,7 @@
         <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2mrLRQORWUlnICf8icb2LA@2x.jpeg" alt="">
       </figure>
       <p class="lead mt-4 mb-8">
-      It might seem elusive finding a satisfying and long lasting relationship in which you feel devoted, appreciated, and valued. Many women wonder how to draw a guy who sees them as valuable and who also wants to spend the rest of their lives with them. In actuality, developing a strong connection involves more than just attraction. It also calls for comprehension, work, and a little bit of planning. This all-inclusive guide will help you become the woman he wants to spend the rest of his life with. Unlock the key to his heart with this guide,  <a href="/product/6" class="text-blue-300 underline"> Discover more</a>
+      It might seem elusive finding a satisfying and long lasting relationship in which you feel devoted, appreciated, and valued. Many women wonder how to draw a guy who sees them as valuable and who also wants to spend the rest of their lives with them. In actuality, developing a strong connection involves more than just attraction. It also calls for comprehension, work, and a little bit of planning. This all-inclusive guide will help you become the woman he wants to spend the rest of his life with. Unlock the key to his heart with this guide,  <a href="https://commitmentconnection.com/the-forever-woman-cb/?hopId=a0d6225c-6e3b-4f8f-90e9-35127661cc89&pid=forever" class="text-blue-300 underline"> Discover more</a>
       </p>
 
             <h4 class="italic mb-8">~Uncover Your True Self:</h4>
@@ -84,33 +84,32 @@ Knowing how to recognize, feel, and control your emotions while maintaining empa
       <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Related articles</h2>
       <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <article class="max-w-xs">
-              <a href="/article-two">
+              <a href="/blog/article-three">
                   <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2XNoQNVPXqo2D4nxM7o37A@2x.jpeg" class="mb-5 rounded-lg" alt="Image 1">
               </a>
               <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
-                  <a href="#">Boost Your Brain health with Simple Lifestyle Hacks 🧠</a>
+                  <a href="/blog/article-three">Boost Your Brain health with Simple Lifestyle Hacks 🧠</a>
               </h2>
               <p class="mb-4 text-gray-500 dark:text-gray-400">Discover how Neurozoom can enhance your cognitive function and support your brain health...</p>
-              <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+              <a href="/blog/article-three" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
                   Read in 4 minutes
               </a>
           </article>
           <article class="max-w-xs">
-              <a href="/blog/article-three">
+              <a href="/blog/article-two">
                   <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2mrLRQORWUlnICf8icb2LA@2x.jpeg" class="mb-5 rounded-lg" alt="Image 2">
               </a>
               <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
-                  <a href="#">The Secret to Attracting and Keeping a Man Who Loves You: A Guide to Lasting Commitment</a>
+                  <a href="/blog/article-two">The Secret to Attracting and Keeping a Man Who Loves You: A Guide to Lasting Commitment</a>
               </h2>
               <p class="mb-4  text-gray-500 dark:text-gray-400">how to Make Him Want to come back and never leave again....</p>
-              <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+              <a href="/blog/article-two" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
                   Read in 12 minutes
               </a>
           </article>
       </div>
   </div>
 </aside>
-
 
 </template>
 
