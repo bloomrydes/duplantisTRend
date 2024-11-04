@@ -34,7 +34,7 @@ jobs:
           SERVER_IP: ${{ secrets.HOST }}
           SERVER_PATH: "/var/www/duplantistrend"
         run: |
-          # Create directory if it doesn't exists
+          # Create directory if it doesn't exis
           ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP "mkdir -p $SERVER_PATH"
           
           # Copy build files to the server
