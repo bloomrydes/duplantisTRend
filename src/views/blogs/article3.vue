@@ -174,7 +174,7 @@ While supplements like Neurozoom can play a significant role in enhancing cognit
               </h2>
               <p class="mb-4  text-gray-500 dark:text-gray-400">how to Make Him Want to come back and never leave again....</p>
               <a href="/blog/article-two" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
-                  Read in 12 minutes
+                  Read in 12 minute
               </a>
           </article>
       </div>
