@@ -28,7 +28,7 @@
       
       <p class="lead mt-4 mb-8">
         In today’s fast-paced world, maintaining optimal brain health is more important than ever. With the demands of daily life, from work to social commitments, our cognitive function can sometimes take a hit. Enter Neurozoom, a groundbreaking supplement designed to support brain health and enhance mental clarity. In this article, we’ll explore how Neurozoom can aid your cognitive well-being and share some simple lifestyle hacks to boost your brain power. Discover how Neurozoom can enhance your cognitive function and support your brain health.
-        <a href="https://teaburn.com/welcome?hop=jasper0077" class="text-blue-300 underline"> Learn more here!</a>
+        <a href="https://getneurozoom.com/welcome/" class="text-blue-300 underline"> Learn more here!</a>
       </p>
 <figure class="mb-8 lg:mb-10">
         <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2XNoQNVPXqo2D4nxM7o37A@2x.jpeg" alt="">
