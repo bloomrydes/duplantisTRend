@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white dark:bg-gray-500">
     <div class="container px-6 py-10 mx-auto">
-      <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white mb-8">Duplantis Trends Blog</h1>
+      <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white mb-8">Duplantis Trends Blog TEstiiiigngn</h1>
 
       <!-- Category Filter -->
       <div class="mb-6">
