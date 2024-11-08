@@ -20,15 +20,10 @@
         </address>
         <h1 class="mb-6 text-3xl font-extrabold leading-tight text-gray-900 lg:text-4xl dark:text-black">
           Behind the Curtain: Insights You Won't Find In Books
-
-        </h1>
-        <h1 class="mb-6 text-3xl font-extrabold leading-tight text-gray-900 lg:text-4xl dark:text-black">
-
-          Impact-Site-Verification: 367128ad-ee36-4d34-b727-dc716d1aca40
         </h1>
         <h6 class="mb-6 text-medium leading-tight text-gray-900 lg:text-xl dark:text-black">
           Unlock Your Metabolism and Boost Your Energy with TeaBurn: The Ultimate Fat-Burning Tea Supplement
-          Impact-Site-Verification: undefined
+          
         </h6>
       </header>
 
