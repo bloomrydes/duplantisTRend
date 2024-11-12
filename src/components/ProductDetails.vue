@@ -30,7 +30,7 @@ export default {
           id: 1, 
           name: 'Tea Burn', 
           category: 'fitness', 
-          description: 'This tennis racket is made with high-quality materials and is designed for professional use. It provides excellent balance and durability.', 
+          description: 'It consists of vitamins, minerals and other important nutrients to ramp up your immunity andturbocharge your metabolism.Tea Burn is 100% naturally formulated without any colours, stimulants, preservatives, or adulteratedsubstances. It is also sent for a quality check in third-party labs to get a power-packed supplement.', 
           createdAt: '2024-10-10', 
           image: '/1.jpg',
           buyLink: 'https://tinyurl.com/3kuh69pt' // Add a link for purchasing
@@ -39,7 +39,7 @@ export default {
           id: 3, 
           name: 'GlucoBerry', 
           category: 'tech', 
-          description: 'A surfing board with the latest technology, providing enhanced stability and performance on the water.', 
+          description: 'Support Optimal Blood Health: GlucoBerry supplement is loaded with powerful antioxidant support fromour custom blend of Maqui Berry, Biotin, Gymnema leaf extract, and Chromium.Superstar Kidney Support: GlucoBerry contains optimized maqui berry, a superfood known to supportoptimal kidney function, especially in effectively draining excess substances from your blood. This helpsmaintain balanced levels throghout the day.Doctor-Formulated: Dr. Mark Weis and his team designed this blend for maximum health support, based on real-world results. Just take one small capsule each day. Manufactured in the USA. Vegetarian and vegan-friendly. Rigorously tested for purity and effectiveness.', 
           createdAt: '2024-09-15', 
           image: '/2.jpg',
           buyLink: 'https://tinyurl.com/y7pe9kw7' // Add a link for purchasing
@@ -48,7 +48,7 @@ export default {
           id: 2, 
           name: 'LeanBiome', 
           category: 'health', 
-          description: 'An advanced beauty serum with natural ingredients to help nourish and rejuvenate your skin.', 
+          description: 'Powerful Probiotics for Gut Support: LeanBiome is a 9-strain probiotic supplement containing 20 billionCFUs (colony-forming units). This unique blend of gut-supporting ingredients is scientifically shown tosupport your fitness journey. It works by rebalancing the gut microbiome to reduce fat storage, givingyou an added boost to achieve your health goals.Research-Backed Ingredients: LeanBiome contains a variety of powerhouse probiotics to improve overallgut health. The key probiotics that rebalance your microbiome include lactobacillus gasseri, lactobacillusrhamnosus, and lactobacillus fermentum. It also contains Greenselect Phytosome, a caffeine-free greentea extract formulated with absorption-boosting technology.', 
           createdAt: '2024-09-25', 
           image: '/3.jpg',
           buyLink: 'https://tinyurl.com/462t9yeb' // Add a link for purchasing
@@ -66,7 +66,7 @@ export default {
           id: 5, 
           name: 'Neuro Zoom', 
           category: 'tech', 
-          description: 'Wireless headphones with advanced noise-canceling features, providing a premium sound experience.', 
+          description: 'Enhance Cognitive Performance: Neuro Zoom capsules are carefully crafted with a unique formula designed to accelerate thinking speed, optimize focus, promote healthy memory and creativity. Holistic Cognitive Support: Neuro Zoom is your comprehensive solution for total cognitive well-being. This nootropic formula not only increases brain power but also provides efficient support for enhanced memory and improved concentration.All-Natural Brain Boost: Neuro Zoom is made from safe and pure ingredients, ensuring a brain health supplement that supports concentration and focus. Our advanced formula is designed for complete cognitive support.', 
           createdAt: '2024-07-28', 
           image: '/5.jpg',
           buyLink: 'https://example.com/buy/5' // Add a link for purchasing
@@ -75,7 +75,7 @@ export default {
           id: 6, 
           name: 'The Forever Woman', 
           category: 'health', 
-          description: 'A complete nutrition pack designed to support your overall health and wellness.', 
+          description: "You want to be loved and cherished by a man. You want a man who feels like you're too important to him to lose you.But we live in the age of the 'hookup culture' where casual, friend with benefits situationships have become the norm.Maybe you get into a situation where you give your everything only to be taken for granted, have the guy pull away, and eventually disappear on your altogether. This makes you feel confused, frustrated, and feeling like you doubt yourself and your own worth..wondering if you'll ever get into the relationship you want.If you’re having a hard time with men and dating, it’s not your fault. We live in a culture that encourages superficial relationships and discourages anything meaningful.I believe there’s a better way for men and women to get into and stay in committed relationships that last. That’s why I put together a proven path that will help you get into the relationship you want. It’s called, 'The Forever Woman.'",
           createdAt: '2024-07-10', 
           image: '/6.jpg',
           buyLink: 'https://tinyurl.com/2mma6ky4' // Add a link for purchasing

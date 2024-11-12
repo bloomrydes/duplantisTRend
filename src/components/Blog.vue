@@ -70,6 +70,22 @@ export default {
           image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2XNoQNVPXqo2D4nxM7o37A@2x.jpeg",
           routeName: "ArticleThree",
         },
+         {
+          id: '4',
+          title: 'Lost Treasures and Timeless Tales: Unearthing the Rich Tapestry of Benin History',
+          date: 'October 16, 2024',
+          image: 'https://miro.medium.com/v2/resize:fit:1400/format:webp/1*3P0yqPSzoQIl1o09lTmgZg@2x.jpeg',
+         routeName: "ArticleFour",
+          description: 'In the heart of West Africa, nestled between lush forests and the banks of the Niger River, lay the majestic Benin Kingdom ..', // Added summary
+        },
+        {
+         id: '5',
+          title: 'From Heavy To Healthy',
+          date: 'October 22, 2024',
+          image: 'https://miro.medium.com/v2/resize:fit:1400/format:webp/1*jm7B_1Y0l9M41A_BlmslKg@2x.jpeg',
+          routeName: "ArticleFive",
+          description: "Empower Your Weight Loss Journey With LeanBiome's Unique Formula..", // Added summary
+        },
       ],
     };
   },
