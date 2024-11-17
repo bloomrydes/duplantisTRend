@@ -8,14 +8,14 @@ import ProductPage from "./views/ProductPage.vue";
 import ProductDetail from "./views/productDetail.vue";
 import Sub from "./views/subscribe.vue";
 import ArticleOne from "./views/blogs/article1.vue";
-
+import Form from "./views/PostBlog.vue";
 import ArticleTwo from "./views/blogs/article2.vue";
 import ArticleThree from "./views/blogs/article3.vue";
 import ArticleFour from "./views/blogs/article4.vue";
-
+import  Main from "./views/Main.vue";
 import ArticleFive from "./views/blogs/article5.vue";
 import "./style.css";
-
+import SingleBlog from "./views/SingleBlog.vue";
 // Define your routes
 const routes = [
   {
@@ -72,6 +72,21 @@ const routes = [
     path: "/blog/article-five", // Adjust the path according to your needs
     name: "ArticleFive",
     component: ArticleFive,
+  },
+  {
+    path: "/post/form", // Adjust the path according to your needs
+    name: "Form",
+    component: Form,
+  },
+  {
+    path: "/main", // Adjust the path according to your needs
+    name: "Main",
+    component: Main,
+  },
+  {
+    path: "/blog/:id", // Adjust the path according to your needs
+    name: "SingleBlog",
+    component: SingleBlog,
   },
 ];
 
