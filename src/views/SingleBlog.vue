@@ -1,7 +1,7 @@
 <template>
   <div class="posts-container">
     <!-- Main Title -->
-    <h1 class="text-center text-4xl font-bold text-white mb-6 bg-gradient-to-r from-blue-500 via-teal-500 to-purple-600 p-2 rounded-lg">
+    <h1 class="text-center text-4xl font-bold text-white mb-6 bg-black p-2 rounded-lg">
       Post Details
     </h1>
 
@@ -70,6 +70,7 @@ export default {
 <style scoped>
 /* Import the Playfair Display font for blog title */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* Import the Cormorant Garamond font for description */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
@@ -91,9 +92,10 @@ h1 {
   font-size: 2rem;
 }
 
+
 h2.blog-title {
-  font-family: 'Playfair Display', serif; /* Apply Playfair Display font */
-  font-size: 2rem;
+  font-family: 'Libre Baskerville', serif; /* Apply Libre Baskerville font */
+  font-size: 1.8rem;
   font-weight: 800;
   margin-bottom: 10px;
 }
@@ -105,8 +107,12 @@ p.description {
 }
 
 .content {
+    margin-top: 16px;
   font-size: 1rem;
   margin-top: 10px;
+  font-family: 'Playfair Display';
+  line-height: 32px
+  
 }
 
 hr {
