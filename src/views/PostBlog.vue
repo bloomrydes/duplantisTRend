@@ -80,7 +80,7 @@ export default {
 
       // Post data to backend API
       axios
-        .post("http://localhost:9000/api/v1/post", this.formData)
+        .post("https://duplantistrendbacken.onrender.com/api/v1/post", this.formData)
         .then((response) => {
           console.log("Post Created:", response.data);
           // You can handle a successful response here

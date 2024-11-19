@@ -1,8 +1,8 @@
 <template>
-  <div class="posts-container">
+  <div class="posts-container mb-12">
     <!-- Main Title -->
     <h1 class="text-4xl font-bold text-white mb-6 bg-black p-2 rounded-lg text-center">
-      All Posts
+      Blog Posts
     </h1>
 
     <!-- Loading State -->
@@ -21,8 +21,15 @@
     </div>
 
     <!-- Display Posts -->
-    <div v-if="!loading && !error && posts.length > 0" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div v-for="post in posts" :key="post._id" class="post-card bg-white shadow rounded p-4 flex flex-col">
+    <div
+      v-if="!loading && !error && posts.length > 0"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+    >
+      <div
+        v-for="post in posts"
+        :key="post._id"
+        class="post-card bg-white shadow rounded p-4 flex flex-col"
+      >
         <!-- Blog Title -->
         <h2 class="text-2xl font-bold text-black mb-2">
           {{ post.title }}
@@ -32,7 +39,12 @@
         <p class="text-gray-600 mb-4 flex-grow">
           {{ post.description }}
         </p>
-        
+
+        <!-- Created At -->
+        <p class="text-sm text-gray-500 mb-4">
+          Created on: {{ formatDate(post.createdAt) }}
+        </p>
+
         <!-- Read Blog Button -->
         <button
           @click="viewBlog(post._id)"
@@ -59,7 +71,7 @@ export default {
   async created() {
     try {
       // Fetch all posts from the backend
-      const response = await axios.get("http://localhost:9000/api/v1/posts"); // Adjust the URL as needed
+      const response = await axios.get("https://duplantistrendbacken.onrender.com/api/v1/posts"); // Adjust the URL as needed
       this.posts = response.data.posts; // Store posts in the component state
     } catch (error) {
       // Handle errors and set the error message
@@ -76,15 +88,22 @@ export default {
       // Example: Navigate to blog details page
       this.$router.push(`/blog/${postId}`);
     },
+    formatDate(date) {
+      // Format date as day/month/year
+      const options = { day: "2-digit", month: "2-digit", year: "numeric" };
+      return new Date(date).toLocaleDateString(undefined, options);
+    },
   },
 };
 </script>
 
+
 <style scoped>
 .posts-container {
   padding: 20px;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
+  margin-bottom: 54px;
 }
 
 .post-card {

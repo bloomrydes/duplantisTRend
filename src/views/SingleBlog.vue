@@ -1,14 +1,38 @@
 <template>
   <div class="posts-container">
     <!-- Main Title -->
-    <h1 class="text-center text-4xl font-bold text-white mb-6 bg-black p-2 rounded-lg">
+    <!-- <h1 class="text-center text-4xl font-bold text-white mb-6 bg-black p-2 rounded-lg">
       Post Details
-    </h1>
+    </h1> -->
 
     <!-- Loading State -->
-    <div v-if="loading" class="text-center">
-      <p>Loading post...</p>
-    </div>
+    <div v-if="loading" class="flex flex-col items-center justify-center py-10">
+  <!-- Animated Spinner -->
+  <svg
+    class="animate-spin h-10 w-10 text-orange-500"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <circle
+      class="opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      stroke-width="4"
+    ></circle>
+    <path
+      class="opacity-75"
+      fill="currentColor"
+      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+    ></path>
+  </svg>
+
+  <!-- Loading Message -->
+  <p class="text-gray-500 mt-4 text-lg">Fetching the latest post...</p>
+</div>
+
 
     <!-- Error State -->
     <div v-if="error" class="text-center text-red-500">
@@ -56,7 +80,7 @@ export default {
     const postId = this.$route.params.id; // Get the post ID from the route params
     try {
       // Fetch the post by ID from the backend
-      const response = await axios.get(`http://localhost:9000/api/v1/posts/${postId}`);
+      const response = await axios.get(`https://duplantistrendbacken.onrender.com/api/v1/posts/${postId}`);
       this.post = response.data.post; // Store the post in the component state
     } catch (err) {
       this.error = err.response?.data?.error || "Failed to fetch the post. Please try again later.";
@@ -102,7 +126,7 @@ h2.blog-title {
 
 p.description {
   font-family: 'Cormorant Garamond', serif; /* Apply Cormorant Garamond font */
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #4b4b4b; /* Darker color for the description */
 }
 

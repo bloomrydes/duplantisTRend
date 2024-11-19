@@ -1,16 +1,20 @@
 <template>
- 
-<Header/>
-<BlogContent/>
-</template>
+    <LandingPage/>
 
+
+</template>
 <script>
-import Header from '../components/BlogHeading.vue';
-import BlogContent from '../components/BlogContent.vue';
+ 
+import LandingPage from  '../components/LandingPages.vue';
+
+
 export default {
   components: {
-    Header,
-    BlogContent
-  },
-};
+
+    // ProductComponent,
+    LandingPage,
+
+
+  }
+}
 </script>
