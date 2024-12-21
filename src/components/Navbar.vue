@@ -11,6 +11,9 @@
           <!-- Menu (Visible on all screens) -->
           <ul class="flex space-x-12">
             <li>
+              <router-link class="text-sm lg:text-lg text-white hover:text-orange-100 font-bold cursor-pointer" to="/">Home</router-link>
+            </li>
+            <li>
               <router-link class="text-sm lg:text-lg text-white hover:text-orange-100 font-bold cursor-pointer" to="/blog-page">Blogs</router-link>
             </li>
             <li>
@@ -19,9 +22,9 @@
           </ul>
 
           <!-- Subscribe Button -->
-          <div class="flex items-center">
+          <!-- <div class="flex items-center">
             <router-link class="inline-block py-3 px-4 text-sm lg:text-lg font-semibold text-orange-50 bg-orange-500 border border-orange-500 rounded-md transition duration-300 hover:bg-orange-700" to="/subscribe">Subscribe</router-link>
-          </div>
+          </div> -->
         </div>
       </div>
     </nav>
