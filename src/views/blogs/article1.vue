@@ -11,7 +11,7 @@
             <img class="mr-4 w-16 h-16 rounded-full" src="/public/debbie.jpeg" alt="Jese Leos">
             <div>
               <a href="#" rel="author" class="text-xl font-bold dark:text-black">Deborah Enirayetan </a>
-              <p class="text-base dark:text-black">Writer</p>
+
               <p class="text-base dark:text-black">
                 <time pubdate datetime="2022-02-08" title="February 8th, 2022">Oct, 10, 2024</time>
               </p>
