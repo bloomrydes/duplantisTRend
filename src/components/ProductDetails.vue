@@ -28,7 +28,7 @@ export default {
       products: [
         { 
           id: 1, 
-          name: 'Tea Burn', 
+          name: 'Tea Burn evrybody papa', 
           category: 'fitness', 
           description: 'It consists of vitamins, minerals and other important nutrients to ramp up your immunity andturbocharge your metabolism.Tea Burn is 100% naturally formulated without any colours, stimulants, preservatives, or adulteratedsubstances. It is also sent for a quality check in third-party labs to get a power-packed supplement.', 
           createdAt: '2024-10-10', 
