@@ -1,3 +1,4 @@
+
 <template>
  
 <Header/>
@@ -14,3 +15,5 @@ export default {
   },
 };
 </script>
+<style>
+</style>

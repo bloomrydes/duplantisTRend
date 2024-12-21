@@ -1,6 +1,8 @@
+
+
 <template>
  <Hero/>
-    <!-- <ProductComponent/>     -->
+
     <BlogComponent/>
     <NewsletterSection/>
     <Testimonials/>
