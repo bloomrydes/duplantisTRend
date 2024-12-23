@@ -16,6 +16,8 @@ import  Main from "./views/Main.vue";
 import ArticleFive from "./views/blogs/article5.vue";
 import "./style.css";
 import SingleBlog from "./views/SingleBlog.vue";
+import Flight from "./views/Flight.vue";
+import FlightDetail from "./components/FlightDetail.vue";
 // Define your routes
 const routes = [
   {
@@ -87,6 +89,16 @@ const routes = [
     path: "/blog/:id", // Adjust the path according to your needs
     name: "SingleBlog",
     component: SingleBlog,
+  },
+  {
+    path: "/flight",
+    name: "Flight",
+    component: Flight,
+  },
+  {
+    path: "/flight/details",
+    name: "FlightDetail",
+    component: FlightDetail,
   },
 ];
 

@@ -8,23 +8,35 @@
             <img class="h-[70px] w-auto" src="/logo.jpeg" alt="Logo" />
           </router-link>
 
-          <!-- Menu (Visible on all screens) -->
-          <ul class="flex space-x-12">
-            <li>
+          <!-- Hamburger Menu Icon (Mobile) -->
+          <div class="lg:hidden">
+            <button @click="toggleMenu" class="text-white focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Menu -->
+          <ul
+            :class="[
+              'flex flex-col lg:flex-row lg:space-x-12 lg:static bg-black lg:bg-transparent w-full lg:w-auto transition-all',
+              isMenuOpen ? 'block' : 'hidden lg:block',
+            ]"
+          >
+            <li class="border-b lg:border-none border-gray-600 lg:py-0 py-2">
               <router-link class="text-sm lg:text-lg text-white hover:text-orange-100 font-bold cursor-pointer" to="/">Home</router-link>
             </li>
-            <li>
+            <li class="border-b lg:border-none border-gray-600 lg:py-0 py-2">
               <router-link class="text-sm lg:text-lg text-white hover:text-orange-100 font-bold cursor-pointer" to="/blog-page">Blogs</router-link>
             </li>
-            <li>
+            <li class="border-b lg:border-none border-gray-600 lg:py-0 py-2">
               <router-link class="text-sm lg:text-lg text-white hover:text-orange-100 font-bold cursor-pointer" to="/products">Products</router-link>
             </li>
+            <li class="lg:py-0 py-2">
+              <router-link class="text-sm lg:text-lg text-white hover:text-orange-100 font-bold cursor-pointer" to="/flight">My Trip</router-link>
+            </li>
           </ul>
-
-          <!-- Subscribe Button -->
-          <!-- <div class="flex items-center">
-            <router-link class="inline-block py-3 px-4 text-sm lg:text-lg font-semibold text-orange-50 bg-orange-500 border border-orange-500 rounded-md transition duration-300 hover:bg-orange-700" to="/subscribe">Subscribe</router-link>
-          </div> -->
         </div>
       </div>
     </nav>
@@ -33,13 +45,35 @@
 
 <script>
 export default {
-  // Since we no longer need toggle functionality, no JavaScript is required
+  data() {
+    return {
+      isMenuOpen: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+  },
 };
 </script>
 
 <style scoped>
-/* Add any specific styles if needed */
+/* Add specific styles if needed */
+
+/* Adjust for larger screens */
+@media (min-width: 1024px) {
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures that the links are spaced out */
+  }
+  nav ul li {
+    padding: 0 16px; /* Adds padding between items */
+  }
+}
 </style>
+
 
 
 
