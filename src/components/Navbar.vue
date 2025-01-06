@@ -34,7 +34,7 @@
               <router-link class="text-sm lg:text-lg text-white hover:text-orange-100 font-bold cursor-pointer" to="/products">Products</router-link>
             </li>
             <li class="lg:py-0 py-2">
-              <router-link class="text-sm lg:text-lg text-white hover:text-orange-100 font-bold cursor-pointer" to="/flight">My Trip</router-link>
+              <router-link class="text-sm lg:text-lg text-white hover:text-orange-100 font-bold cursor-pointer" to="/flight">Fly Now</router-link>
             </li>
           </ul>
         </div>

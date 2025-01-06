@@ -3,9 +3,16 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-image">
-        <div class="hero-text">Best deals are waiting for you</div>
-      </div>
+          </div>
+      
+      <!-- Heading Text -->
+      
+
       <div class="search-bar">
+        <div class="search-heading" style="background-color: orange; padding: 20px; width: 100%;">
+        <h2 class="text-2xl font-bold text-center mb-4">Book Your Next Flight</h2>
+        <p class="text-center text-sm text-gray-700">Find the best deals on flights from various destinations</p>
+      </div>
         <div class="search-item">
           <label for="from">From</label>
           <input v-model="searchData.from" type="text" id="from" placeholder="London Stansted" />
@@ -27,12 +34,20 @@
         </button>
       </div>
     </section>
+    
+    <FlightCard />
   </div>
 </template>
 
+
 <script>
+import FlightCard from './FlightDetail.vue'; // Import the component
+
 export default {
   name: "SkyPlaneComponent",
+  components: {
+    FlightCard, // Register the component
+  },
   data() {
     return {
       searchData: {
@@ -84,6 +99,21 @@ export default {
   transform: translate(-50%, -50%);
   font-size: 2rem;
   font-weight: bold;
+}
+
+.search-heading {
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
+
+.search-heading h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.search-heading p {
+  font-size: 1rem;
+  color: #666;
 }
 
 .search-bar {
@@ -155,6 +185,7 @@ input[type="date"]:focus {
 }
 
 /* Media Queries */
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
   .hero-image {
     height: 250px; /* Reduce height for mobile screens */
@@ -165,22 +196,48 @@ input[type="date"]:focus {
   }
 
   .search-bar {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
+    flex-direction: column; /* Stack elements vertically */
+    padding: 1.5rem; /* Add more padding for spacing */
+    gap: 1rem; /* Add consistent spacing between items */
+    width: 100%; /* Use full width of the screen */
   }
 
   .search-item {
-    flex: 1 1 100%; /* Full width on smaller screens */
+    width: 100%; /* Inputs take full width */
     max-width: none; /* Remove max-width restriction */
+  }
+
+  .search-item label {
+    text-align: left; /* Align labels to the left */
+    margin-bottom: 0.5rem; /* Add spacing below label */
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  .search-item input {
+    width: 100%; /* Full width */
+    padding: 0.8rem; /* Increase padding for better touch experience */
+    font-size: 1rem; /* Larger text for readability */
+    border-radius: 5px;
+    border: 1px solid #ddd;
   }
 
   .search-btn {
     font-size: 1rem;
     height: 50px;
-    width: 50px;
+    width: 100%; /* Button takes full width */
+    border-radius: 10px; /* Larger, rounded button for better touch area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-arrow-right {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
   }
 }
+
 </style>
 
 
